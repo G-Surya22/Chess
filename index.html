@@ -1,0 +1,67 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Offline Chess</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app">
+    <h1>Offline Chess</h1>
+
+    <section class="panel controls">
+      <label for="mode">Mode</label>
+      <select id="mode">
+        <option value="pvp">Player vs Player</option>
+        <option value="pvc-white" selected>Player (White) vs Computer</option>
+        <option value="pvc-black">Player (Black) vs Computer</option>
+      </select>
+
+      <label for="difficulty">Computer Strength</label>
+      <select id="difficulty">
+        <option value="1">Easy</option>
+        <option value="2" selected>Medium</option>
+        <option value="3">Hard</option>
+      </select>
+
+      <div class="buttons">
+        <button id="newGameBtn" type="button">New Game</button>
+        <button id="flipBtn" type="button">Flip Board</button>
+        <button id="undoBtn" type="button">Undo Move</button>
+      </div>
+    </section>
+
+    <section class="panel game-area">
+      <div id="status" class="status">White to move</div>
+      <div id="board" class="board" aria-label="Chess board"></div>
+      <section class="insights" aria-label="Game insights">
+        <div class="insight-card">
+          <div class="insight-title">Win Probability</div>
+          <div class="prob-row">
+            <span id="whiteProbText">White 50%</span>
+            <span id="blackProbText">Black 50%</span>
+          </div>
+          <div class="prob-meter">
+            <div id="whiteProbFill" class="prob-fill"></div>
+          </div>
+        </div>
+        <div class="insight-card">
+          <div class="insight-title">Lost Pieces</div>
+          <div class="captured-block">
+            <span class="captured-label">White lost</span>
+            <div id="whiteLostPieces" class="captured-pieces">None</div>
+          </div>
+          <div class="captured-block">
+            <span class="captured-label">Black lost</span>
+            <div id="blackLostPieces" class="captured-pieces">None</div>
+          </div>
+        </div>
+      </section>
+      <div class="small-note">Click a piece, then click destination square.</div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
