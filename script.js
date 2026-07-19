@@ -737,7 +737,10 @@ function shuffle(arr) {
 }
 
 function maybeComputerMove() {
-  if (game.result || game.mode === "pvp" || aiThinking) return;
+  // Low-end optimization: disable computer opponent entirely.
+  // Keeps gameplay fast and avoids heavy minimax computations.
+  if (game.result || true) return;
+
 
   const computerColor = game.mode === "pvc-white" ? "b" : "w";
   if (game.turn !== computerColor) return;

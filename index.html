@@ -10,14 +10,16 @@
 <body>
   <main class="app">
     <h1>Offline Chess</h1>
-    <script async="async" data-cfasync="false" src="https://pl30219713.effectivecpmnetwork.com/109b7607abd2a845df825d07afb7a01c/invoke.js"></script>
-<div id="container-109b7607abd2a845df825d07afb7a01c"></div>
+    <script defer async="async" data-cfasync="false" src="https://pl30219713.effectivecpmnetwork.com/109b7607abd2a845df825d07afb7a01c/invoke.js"></script>
+    <div id="container-109b7607abd2a845df825d07afb7a01c" aria-label="Advertisement" role="complementary"></div>
+
     <section class="panel controls">
       <label for="mode">Mode</label>
       <select id="mode">
         <option value="pvp">Player vs Player</option>
-        <option value="pvc-white" selected>Player (White) vs Computer</option>
+        <option value="pvc-white">Player (White) vs Computer</option>
         <option value="pvc-black">Player (Black) vs Computer</option>
+        <option value="pvp" selected>Player vs Player</option>
       </select>
       <a href="https://www.effectivecpmnetwork.com/r7eqq101?key=974b9a7e27c80cef0ab909c957f0ded7"></a>
       <label for="difficulty">Computer Strength</label>
@@ -71,11 +73,15 @@
     'width' : 300,
     'params' : {}
   };
-</script>
-<script src="https://www.highperformanceformat.com/70c151ee5a0cc0fdf1b493bd373b9c72/invoke.js"></script>
+  </script>
+  <script defer src="https://www.highperformanceformat.com/70c151ee5a0cc0fdf1b493bd373b9c72/invoke.js"></script>
 
-  <script src="script.js"></script>
-  <script src="https://pl30219715.effectivecpmnetwork.com/8b/80/c5/8b80c5037acd3793168b45f4c5e7a2aa.js"></script>
+  <script src="script.js" defer></script>
+  <style>
+    /* ensure scripts do not cause layout shifts during ad load */
+    #container-109b7607abd2a845df825d07afb7a01c{content-visibility:auto;contain:layout paint;}
+  </style>
+  <script defer src="https://pl30219715.effectivecpmnetwork.com/8b/80/c5/8b80c5037acd3793168b45f4c5e7a2aa.js"></script>
 
 </body>
 </html>
